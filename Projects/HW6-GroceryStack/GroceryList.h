@@ -32,7 +32,7 @@ public:
    }
    
    virtual void RemoveAtWithUndo(int removalIndex) {
-      // TODO: Type your code here
+
       if (removalIndex >= 0 && removalIndex < listItems.size()) {
         std::string removedItem = listItems[removalIndex];
         listItems.erase(listItems.begin() + removalIndex);
@@ -42,7 +42,7 @@ public:
    }
    
    virtual void SwapWithUndo(int index1, int index2) {
-      // TODO: Type your code here
+
       std::swap(listItems[index1], listItems[index2]);
       undoStack.push(new SwapCommand(&listItems, index1, index2));
    }
