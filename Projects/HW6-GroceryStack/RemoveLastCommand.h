@@ -15,7 +15,7 @@ public:
    }
    
    void Execute() override {
-      // TODO: Type your code here
+ 
       if (sourceVector && !sourceVector->empty()) {
         sourceVector->pop_back();
       }
