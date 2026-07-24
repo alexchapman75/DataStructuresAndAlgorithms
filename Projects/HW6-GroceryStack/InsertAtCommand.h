@@ -7,13 +7,13 @@
 
 class InsertAtCommand : public UndoCommand {
 private:
-   // TODO: Type your member variable declarations here
+
    std::vector<std::string>* sourceVector;
    std::string item;
    int index;
 
 public:
-   // TODO: Type your constructor code here
+
    InsertAtCommand(std::vector<std::string>* vector,
                      std::string itemToInsert, int insertIndex) 
     {
@@ -23,7 +23,7 @@ public:
     }
     
    void Execute() override {
-      // TODO: Type your code here
+
       if(sourceVector) {
         sourceVector->insert(sourceVector->begin() + index, item);
       }
