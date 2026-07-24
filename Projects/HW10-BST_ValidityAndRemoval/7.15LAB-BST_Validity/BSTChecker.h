@@ -1,7 +1,7 @@
 #ifndef BSTCHECKER_H
 #define BSTCHECKER_H
 
-// TODO: Include any needed header files
+
 #include "BSTNode.h"
 #include <unordered_set>
 #include <limits>
