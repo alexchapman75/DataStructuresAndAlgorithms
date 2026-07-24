@@ -6,12 +6,11 @@ using namespace std;
 Library::Library() : bookTop(nullptr), studentFront(nullptr), studentRear(nullptr), bookCount(0), studentCount(0) {}
 
 Library::~Library() {
-    // TODO: implement destructor to free all nodes in stack and queue
     clear();
 }
 
 void Library::addBook(string title) {
-    // TODO: Implement Stack Push (LIFO)
+    //Stack Push (LIFO)
     BookNode* newNode = new BookNode;
     newNode->title = title;
     newNode->next = bookTop;
@@ -125,7 +124,7 @@ Library& Library::operator=(Library&& other) noexcept {
 
 
 bool Library::enqueueStudent(string name, int count) {
-    // TODO: Implement Queue Enqueue (FIFO)
+    //Queue Enqueue (FIFO)
     if (count < 1 || count > 5)
         return false;
 
@@ -149,7 +148,6 @@ bool Library::enqueueStudent(string name, int count) {
 IssueResult Library::issueBook() {
     IssueResult result{0, 0, false};
 
-    // TODO: Implement the issuance logic
     // No students waiting
     if (studentFront == nullptr)
         return result;
@@ -193,7 +191,7 @@ IssueResult Library::issueBook() {
 }
 
 void Library::showBooks() const {
-    // TODO: Traverse the stack from bookTop and print titles
+    //Traverse the stack from bookTop and print titles
     if (bookTop == nullptr) {
         cout << "Available Books (Top to Bottom):\n";
         cout << "  (No books available)\n";
@@ -209,7 +207,7 @@ void Library::showBooks() const {
 }
 
 void Library::showStudents() const {
-    // TODO: Traverse the queue from studentFront and print names/requests
+    //Traverse the queue from studentFront and print names/requests
     if (studentFront == nullptr) {
         cout << "Waiting Students (FIFO Order):\n";
         cout << "  (No students waiting)\n";
@@ -227,7 +225,7 @@ void Library::showStudents() const {
 }
 
 void Library::clear() {
-    // TODO: Manually delete all nodes in the stack and queue to prevent memory leaks
+    // Manually delete all nodes in the stack and queue to prevent memory leaks
     // Clear book stack
     while (bookTop != nullptr) {
         BookNode* temp = bookTop;
