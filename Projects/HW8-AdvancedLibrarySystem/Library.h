@@ -5,19 +5,6 @@
 #include <iostream>
 #include "LibrarySystem.h"
 
-/*
-    You implement Library (backend) which is driven by LibraryUI and Task::execute().
-
-    REQUIRED:
-      - catalog: linked list of LibraryItem* (polymorphic, owned)
-      - borrowed: linked list of borrowed records (titles)
-      - tasks: linked list stack of Task* (polymorphic, owned)
-      - Rule of 5 (deep copy preserves dynamic type and task payload strings)
-
-    CONSTRAINT:
-      - No STL containers for internal storage.
-*/
-
 class Library {
 private:
     struct ItemNode {
