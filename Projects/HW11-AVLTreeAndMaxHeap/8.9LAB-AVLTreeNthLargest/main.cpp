@@ -14,7 +14,6 @@ struct Card {
 
 // Helper function to get rank value, Ace highest
 int rankValue(char rank) {
-    // TODO: Implement rank-to-value mapping (A=14, K=13, ... 2=2)
     if(rank >= '2' && rank <= '9') return rank - '0'; 
     if(rank == 'T') return 10;
     if(rank == 'J') return 11;
@@ -26,14 +25,14 @@ int rankValue(char rank) {
 
 // Compare two cards: return true if c1 > c2 (for max-heap)
 bool cardGreater(const Card& c1, const Card& c2) {
-    // TODO: Implement card comparison using rankValue (ignore suit)
+
     return rankValue(c1.rank) > rankValue(c2.rank);
     return false; // stub
 }
 
 // Heapify function for max-heap property
 void heapify(std::vector<Card>& cards, int n, int i) {
-    // TODO: Implement heapify for max-heap of cards (use cardGreater)
+
     int largest = i;
     int left = 2 * i + 1;
     int right = 2 * i + 2;
@@ -58,7 +57,7 @@ void heapify(std::vector<Card>& cards, int n, int i) {
 
 // Build max-heap from array of cards
 void buildMaxHeap(std::vector<Card>& cards) {
-    // TODO: Implement buildMaxHeap, call heapify appropriately
+
     int n = cards.size();
 
     for (int i = n / 2 - 1; i >= 0; i--) {
@@ -69,7 +68,7 @@ void buildMaxHeap(std::vector<Card>& cards) {
 
 // Print the heap as specified
 void printHeap(const std::vector<Card>& cards) {
-    // TODO: Print each card as [rank][suit], separated by spaces
+
     for (size_t i = 0; i < cards.size(); i++) {
         std::cout << cards[i].rank << cards[i].suit;
         if (i != cards.size() - 1) {
